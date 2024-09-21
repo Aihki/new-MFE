@@ -4,3 +4,4 @@ declare module 'TopBar/*';
 declare module 'video_player/*';
 declare module 'Sidebar/*';
 declare module 'upload/*';
+declare module 'comments/*';

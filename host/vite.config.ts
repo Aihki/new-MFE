@@ -16,6 +16,7 @@ export default defineConfig({
         video_player: "http://localhost:3003/assets/remoteEntry.js",
         Sidebar: 'http://localhost:3005/assets/remoteEntry.js',
         upload: 'http://localhost:3006/assets/remoteEntry.js',
+        comments: 'http://localhost:3007/assets/remoteEntry.js',
       },
       shared: ['react', 'react-dom', 'react-router-dom'],
     }),

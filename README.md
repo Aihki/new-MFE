@@ -1,2 +1,2 @@
 # new-MFE
-korjailtu versio [Microfrontends-tutorial]( https://github.com/Aihki/Microfrontends-tutorial).
+korjailtu versio tästä [Microfrontends-tutorial]( https://github.com/Aihki/Microfrontends-tutorial). 

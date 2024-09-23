@@ -5,18 +5,21 @@ import federation from '@originjs/vite-plugin-federation';
 
 // https://vitejs.dev/config/
 export default defineConfig({
+
+  base: '/~tomihenr/microfrontend-project/host/',
+
   plugins: [
     react(),
     federation({
       name: 'juutube',
       remotes: {
-        mediastore: 'http://localhost:3001/assets/remoteEntry.js',
-        front_and_sidebar: 'http://localhost:3002/assets/remoteEntry.js',
-        TopBar: 'http://localhost:3004/assets/remoteEntry.js',
-        video_player: "http://localhost:3003/assets/remoteEntry.js",
-        Sidebar: 'http://localhost:3005/assets/remoteEntry.js',
-        upload: 'http://localhost:3006/assets/remoteEntry.js',
-        comments: 'http://localhost:3007/assets/remoteEntry.js',
+        mediastore: 'https://users.metropolia.fi/~tomihenr/microfrontend-project/store/assets/remoteEntry.js',
+        front_and_sidebar: 'https://users.metropolia.fi/~tomihenr/microfrontend-project/juutube-front-and-sidebar/assets/remoteEntry.js',
+        TopBar: 'https://users.metropolia.fi/~tomihenr/microfrontend-project/juutube-top-bar/assets/remoteEntry.js',
+        video_player: 'https://users.metropolia.fi/~tomihenr/microfrontend-project/juutube-video/assets/remoteEntry.js',
+        Sidebar: 'https://users.metropolia.fi/~tomihenr/microfrontend-project/juutube-real-sidebar/assets/remoteEntry.js',
+        upload: 'https://users.metropolia.fi/~tomihenr/microfrontend-project/juutube-upload/assets/remoteEntry.js',
+        comments: 'https://users.metropolia.fi/~tomihenr/microfrontend-project/juutube-comments/assets/remoteEntry.js',
       },
       shared: ['react', 'react-dom', 'react-router-dom'],
     }),

@@ -5,12 +5,11 @@ import federation from '@originjs/vite-plugin-federation';
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  // Set the base path for correct asset loading in production
+  base: '/~tomihenr/microfrontend-project/store/',
+
   plugins: [
     react(),
-    // Add the federation configuration
-    // name: mediastore
-    // exposes: contextHooks, MediaContext, UserContext, apiHooks
-    // shared: react, react-dom, react-router-dom
     federation({
       name: 'mediastore',
       filename: 'remoteEntry.js',
@@ -24,10 +23,10 @@ export default defineConfig({
     }),
   ],
   server: {
-    port: 3001, // Set the desired port here
+    port: 3001, // Development server port
   },
   preview: {
-    port: 3001, // Set the desired port here
+    port: 3001, // Preview server port
   },
   resolve: {
     alias: {

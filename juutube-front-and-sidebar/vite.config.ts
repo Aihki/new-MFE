@@ -4,6 +4,9 @@ import { defineConfig } from 'vite';
 import federation from '@originjs/vite-plugin-federation';
 
 export default defineConfig({
+  // Set the base path here at the top level
+  base: '/~tomihenr/microfrontend-project/juutube-front-and-sidebar/',
+
   plugins: [
     react(),
     federation({
@@ -18,10 +21,10 @@ export default defineConfig({
     }),
   ],
   server: {
-    port: 3002, // Set the desired port here
+    port: 3002, // Development server port
   },
   preview: {
-    port: 3002, // Set the desired port here
+    port: 3002, // Preview server port
   },
   resolve: {
     alias: {

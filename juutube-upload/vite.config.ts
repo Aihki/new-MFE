@@ -4,6 +4,8 @@ import { defineConfig } from 'vite';
 import federation from '@originjs/vite-plugin-federation';
 
 export default defineConfig({
+  base: '/~tomihenr/microfrontend-project/juutube-upload/',
+
   plugins: [
     react(),
     federation({
@@ -13,16 +15,16 @@ export default defineConfig({
         './MediaForm': './src/views/upload/MediaForm.tsx',
       },
       remotes: {
-        mediastore: 'http://localhost:3001/assets/remoteEntry.js',
+        mediastore: 'https://users.metropolia.fi/~tomihenr/microfrontend-project/store/assets/remoteEntry.js',
       },
       shared: ['react', 'react-dom', 'react-router-dom'],
     }),
   ],
   server: {
-    port: 3006, // Set the desired port here
+    port: 3006, // Development server port
   },
   preview: {
-    port: 3006, // Set the desired port here
+    port: 3006, // Preview server port
   },
   resolve: {
     alias: {

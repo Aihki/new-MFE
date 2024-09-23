@@ -4,10 +4,13 @@ import { defineConfig } from 'vite';
 import federation from '@originjs/vite-plugin-federation';
 
 export default defineConfig({
+  // Set the base path to ensure correct asset loading in production
+  base: '/~tomihenr/microfrontend-project/juutube-real-sidebar/',
+
   plugins: [
     react(),
     federation({
-      name: 'front_and_sidebar',
+      name: 'real_sidebar',
       filename: 'remoteEntry.js',
       exposes: {
         './Sidebar': './src/components/sidebar/Sidebar',
@@ -17,10 +20,10 @@ export default defineConfig({
     }),
   ],
   server: {
-    port: 3005, // Set the desired port here
+    port: 3005, // Development server port
   },
   preview: {
-    port: 3005, // Set the desired port here
+    port: 3005, // Preview server port
   },
   resolve: {
     alias: {
